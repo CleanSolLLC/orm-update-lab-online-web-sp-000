@@ -62,8 +62,8 @@ class Student
   
   def self.find_by_name(name)
     sql = "SELECT * FROM students WHERE name = ?"
-    array = DB[:conn].execute(sql, name)[0]
-    binding.pry
+    student_info = DB[:conn].execute(sql, name)[0]
+    
   end
 
 end
